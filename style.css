@@ -1,0 +1,1134 @@
+/*
+Project Name: Leili Ansari Portfolio
+Developer @GA in BOS
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/* Site Wide Styles */
+
+body {
+	color: darkslategray;
+	background-color:white;
+	font-weight: 200;
+	width: 100%;
+	height: 100%;
+	float: left;
+	text-align:center;
+	line-height: 180%;
+	font-family: 'Oswald', sans-serif;
+}
+
+img {
+	max-height: 80%;
+	max-width: 80%;
+	border-radius: 2px;
+	margin: inherit;
+	float: left;
+	text-align: center;
+}
+
+a {
+	color: #40CCC4;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+button a {
+	color: white;
+}
+
+a:hover {
+	color: rgba(200, 200, 200, 1);
+}
+
+h1 {
+	color: black;
+	font-size: 3em;
+	font-weight: lighter;
+	text-align: center;
+	/*text-shadow: 1px 1px black;*/
+	width: 100%;
+	font-family:'Oswald', sans-serif;
+	float:left;
+	line-height: 110%;
+}
+
+h2 {
+	color: black;
+	text-align: center;
+	font-weight: lighter;
+	font-size: 2em;
+	line-height: 180%;
+	float: left;
+	width:100%;
+}
+
+h3 {
+	text-align:center;
+	font-size: 1.9em;
+	float:left;
+	width:100%;
+	font-weight: 300;
+}
+
+h4 {
+	text-align: left;
+	font-weight: lighter;
+	float: left;
+}
+
+h4{
+	font-size: 1.1em;
+	float: left;
+}
+
+
+p {
+	float: left;
+	padding-left: 20%;
+	padding-right: 40%;
+	width: 100%;
+	font-size: 1.05em;
+	word-spacing: .2em;
+	line-height: 150%;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 100;
+}
+
+nav {
+	float: left;
+	width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    float:left;
+    text-align:center;
+}
+
+li a:hover {
+	color: lightgray;	
+	font-weight: 400;
+}
+
+.footer {
+	float: left;
+	position:relative;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 1em;
+	width: 100%;
+	border-top: 2px black solid;
+	border-width: 100%;
+}
+
+.navbar {
+	float:right;
+	width: 100%;
+	height: 10%;
+	text-align: center;
+	background-color: white;
+}
+
+.navbar>li {
+	padding: 1%;
+    padding-bottom: .5%;
+    width: 95%;
+    border:none;
+    border-radius: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    float: left;
+    background: white;
+    font-size: 1.2em;
+    letter-spacing: .05em;
+    margin-left: 5%;
+}
+
+
+
+.navbar li a {
+	text-align: center;
+	float: left;
+	width: 100%;
+}
+
+.navbar img {
+	width: 1em;
+	padding: 0;
+	opacity: .5;
+	float: right;
+	margin-left: -5%;
+}
+
+.navbar img:hover {
+	opacity: .2;
+}
+
+
+.headerNav {
+	float: left;
+	border-top:1px #40CCC4 solid;
+	background-color: white;
+	width: 100%;
+	height: 3em;
+	margin: 0;
+}
+
+.headerNav li {
+	width: 17%;
+}
+
+.hide {
+	display: none;
+	float: left;
+	background-color: white;
+	border: 1px darkslategray solid;
+	width: 100%;
+	position: relative;
+}
+
+.hide ul {
+	width: 100%;
+	float: left;
+}
+
+.hide li {
+	padding: 2%;
+	font-size: .9em;
+	display: block;
+	border-top:1px #40CCC4 solid;
+	float: left;
+	width: 100%;
+}
+
+.hide a {
+	width: 100%;
+
+}
+
+.hamburger {
+	display: none;
+	float: right;
+	margin-top: 5%;
+}
+.hamburger img {
+	width: 20%;
+	float: left;
+	margin-right: 20%;
+	position: fixed;
+}
+
+.hamburger ul {
+	width: 100%;
+	float: right;
+}
+
+.line {
+	display: none;
+	background-color:rgba(250, 250, 250, .9);
+	border: 1px darkslategray solid;
+	padding: 50px;
+	width: 100%;
+	height: 3em;
+	text-align: center;
+	font-size: 1.8em;
+}
+
+.footerNav {
+	background-color:white;
+	float: left;
+	width: 100%;
+	font-size: .9em;
+	padding-top: 2%;
+	margin-top: 0;
+}
+
+.footerNav li {
+	background-color: white;
+	float: left;
+	width: 15%;
+	}
+
+.footerNav a {
+	color: black;
+}
+
+.hidefoot {
+	width: 100%;
+	text-align: center;
+}
+
+.hidefoot li {
+	width: 100%;
+	position: relative;
+}
+
+.inactive {
+	color: gray;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.active {
+	color: black;
+	text-decoration: none;
+}
+
+.mainHead {
+	height: 20em;
+    width: 100%;
+    margin-top: 4em;
+    float:left;
+    position: relative;
+}
+
+.mainHead div {
+	width: 40%;
+	padding: 2%;
+	float: right;
+	margin: 20% 5% 0 0;
+	background-color:rgba(250,250,250,.85);
+	border-radius: 20px;
+	color: black;
+	font-weight: 400;
+}
+
+.mainHead h1, .mainHead h2 {
+	margin: 5%;
+}
+
+.main div {
+	width: 80%;
+	padding: 10px;
+	float: right;
+	margin:5%;
+	background-color:rgba(250,250,250,.85);
+	border-radius: 20px;
+	color: black;
+	font-weight: 500;
+}
+
+.main p {
+	width: 100%;
+	padding: 1%;
+	font-weight: 200;
+	float: left;
+}
+
+#header {
+	float: left;
+	width: 100%;
+	height: 10em;
+	top: 0;
+	margin-bottom: 0;
+	background-color: white;
+	position: fixed;
+	z-index: 150;
+	text-align: center;
+}
+
+#navbutton, #backTop {
+	display: none;
+	width: auto;
+	height: auto;
+	background-color: white;
+	padding: 10%;
+	padding-bottom: 0;
+	margin-bottom: .5%;
+	color: lightgray;
+	float: left;
+	font-size: .7em;
+}
+
+#backTop {
+	margin: 0 auto;
+
+}
+
+#logo {
+	float: left;
+	height: 4em;
+	width: 100%;
+	background-color:white;
+}
+
+#logo h1 {
+	float: left;
+	width: 96%;
+	text-align: center;
+	font-family: 'Yanone+Kaffeesatz', sans-serif;
+	font-weight: 300;
+	letter-spacing: .7em;
+	font-size: 2em;
+	line-height: 1.2em;
+	color: #4e5956;
+	margin: 2%;
+}
+
+
+input[type="button"], button {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 2px solid #DDDDDD;
+}
+ 
+input[type="button"]:focus, button:focus {
+  box-shadow: 0 0 7px rgba(255, 55, 41, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 2px solid rgba(255, 179, 153, 1);
+}
+
+/* Photography Albums*/
+
+.photo-portf {
+	float:left;
+	width: 48%;
+	margin: 1%;
+	padding: 0;
+}
+
+.photo-portf img {
+	max-width: 100%;
+}
+
+#foodAlbum {
+	width: 45%;
+}
+
+#travelAlbum {
+	width: 50%;
+}
+
+#portraitAlbum {
+	width: 65%;
+	float: right;
+}
+
+#natureAlbum {
+	width: 30%;
+}
+
+/* Page Header Images*/
+
+
+#home {
+    background:url(images/Moreish-Cafe-London.jpg) no-repeat bottom center fixed;
+    background-size: 100%;
+    height: 40em;
+}
+
+#home div {
+	margin: 15% 5% 5% 5%;
+}
+
+#home div h1{
+	width: 100%;
+	margin: 0;
+}
+
+#about {
+	background:url(images/Leili-winter-bio-pic-BW.png) no-repeat top center;
+	background-size: 40%;
+	z-index: 100;
+	height: 400px;
+}
+
+#about div {
+	margin: 10% 5% 0 0;
+	width: 30%;
+	height: 15em;
+}
+
+
+#resume {
+    background:url(images/yin-and-yolk-lock.jpg) no-repeat center center fixed;
+    background-size: 100%;
+    height: 30em;
+}
+
+#resume div {
+	width: 25%;
+	padding: 2%;
+}
+
+#resume h1 {
+	padding: 5%;
+	margin: 0;
+	line-height: 1.2em;
+}
+
+#photos {
+    background:url(images/sage-bunch.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 45em;
+}
+
+#photos div {
+	height: 16em;
+}
+
+#photos h1, h2 {
+	margin-left: 0;
+	margin-right: 0;
+
+}
+
+#writing {
+	background:url(images/hazelnuts.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 35em;
+}
+
+#writing div {
+	height: 10em;
+	width: 25%;
+	margin: 15%;
+}
+
+#writing h1 {
+	margin: 7%;
+	width: 86%;
+}
+
+#design {
+	background:url(images/Lifeguard-Venice-Beach.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 35em;
+}
+
+#design div {
+	margin: 20% 5% 0 0;
+
+}
+
+#contact {
+	background:url(images/Better-Togheter.jpg) no-repeat bottom center fixed;
+	background-size: 100%;
+	height: 35em;
+}
+
+#contact div {
+	width: 25%;
+	height: 5em;
+	margin-top: 20%;
+	margin-right: 10%;
+}
+
+/*//////////////////////////////////
+
+/* Home Page */
+
+.rowOne {
+	height: 400px;
+    width: 100%;
+    margin: 0;
+    opacity: .9;
+    float: left;
+}
+
+.rowOne div {
+	margin: 5% 20% 5% 20%;
+}
+
+.rowOne div:hover {
+	background-color: #abbab8;
+	color: white;
+}
+
+.rowOne p {
+	float: left;
+	font-size: 1.2em;
+	font-family:'Yanone+Kaffeesatz', sans-serif;
+	color: rgba(0,0,0,.8);;
+	background-color: white;
+	padding: 0;
+}
+
+.rowTwo {
+	height: 100%;
+    width: 33%;
+    background:url(images/chocolate-orange-challah.jpg) no-repeat center center;
+    background-size: 100%;
+    margin: 0 auto;
+    opacity: .7;
+    float: left;
+}
+
+.rowThree {
+	height: 100%;
+    width: 33%;
+    background:url(images/Gooey-Chocolate-Chip-Walnut-Cookie-Stack-Levain-Copycat.jpg) no-repeat center center;
+    background-size: 100%;
+    margin: 0 auto;
+    opacity: .7;
+    float: left;
+}
+
+.rowFour {
+    height: 100%;
+    width: 34%;
+    background:url(images/old-men-walking.jpg) no-repeat center center;
+    background-size: 120%;
+    margin: 0 auto;
+    opacity: .7;
+    float: left;
+}
+
+.rowFive {
+	height: 300px;
+    width: 100%;
+    margin: 0 auto;
+    opacity: .9;
+    float: left;
+    background-color: #abbab8;
+}
+
+.rowFive div {
+	width: 60%;
+	float: left;
+}
+
+
+.work {
+	float: left;
+	width: 100%;
+	height: 30em;
+	position: relative;
+}
+
+button {
+	width: 80%;
+	font-family: 'Oswald', sans-serif;
+	font-size: .9em;
+	text-transform: uppercase;
+	color: white;
+	background-color: black;
+	border-radius: 4px;
+}
+
+/*Resume page**/
+
+
+.jobs {
+	text-transform: uppercase;
+	color: gray;
+	text-shadow: .5px .5px black;
+	line-height: 1.3em;
+}
+
+.schools {
+	text-transform: uppercase;
+	color: darkslategray;
+	text-shadow: .5px .5px black;
+}
+
+#summary {
+	width: 100%;
+	padding: 10%;
+	text-align: left;
+	float: left;
+	border: 1px lightgray solid;
+}
+
+#summary:hover{
+	background-color: #abbab8;
+	color: white;
+}
+
+#summary a, .rowOne a {
+	color: black;
+	font-weight: 700;
+}
+
+#summary p {
+	padding: 0;
+}
+
+#work, #education {
+	float: left;
+	width: 40%;
+	height: 30em;
+	line-height: 2em;
+	margin: 5%;
+}
+#work h3, #education h3 {
+	font-size: 1.8em;
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+#work ul, #education ul {
+	width: 100%;
+	text-align: left;
+	line-height: 2em;
+}
+
+#work li, #education li {
+	font-size: 1.5em;
+	line-height: 2em;
+}
+
+
+.webwork {
+	height: 60em;
+}
+
+.webwork div {
+	width: 80%;
+}
+
+/*Contact Page*/
+fieldset {
+	height: 15em;
+}
+
+form {
+	float: left;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-right: 10%;
+	width: 30%;
+	height: 10em;
+	text-align: center;
+}
+
+legend {
+	text-align: center;
+	float: left;
+	position: relative;
+	padding: 5%;
+	margin-bottom: 1em;
+}
+
+input {
+	float: left;
+	width: 40%;
+	padding: 2em;
+	margin: 2%;
+}
+
+select {
+	float: left;
+	width: 90%;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	font-weight: 300;
+  	outline: none;
+  	padding: 3px 0px 3px 3px;
+  	margin: 5px 1px 3px 0px;
+  	border: 2px solid #DDDDDD;
+}
+
+select:focus {
+	box-shadow: 0 0 7px rgba(255, 55, 41, 1);
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 2px solid rgba(255, 179, 153, 1);
+}
+
+option {
+	float: left;
+	text-transform: uppercase;
+	font-family:'Oswald', sans-serif;
+	font-size: 1.1em;
+}
+
+.contactParagraph {
+	float: left;
+	width: 60%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	text-align: left;
+	color: darkslategray;
+}
+
+.contactParagraph p {
+	padding: 15%;
+	padding-top: 5%;
+}
+
+
+.aboutP {
+	float: left;
+	margin: 20%;
+}
+
+.aboutP p {
+	padding: 0 15% 0 15%;
+}
+
+
+.writings {
+	width: 50%;
+	height: 48em;
+	float: left;
+	margin: 0;
+	padding: 4%;
+
+}
+
+.writings:nth-child(-n+3) {
+	border-right: 1px lightgray solid;
+}
+
+.writings img {
+	width: auto;
+	border-radius: 7px;
+	height: auto;
+	float: left;
+	margin: 0 10% 5% 10%;
+}
+
+.writings h3 {
+	width: 70%;
+	float: left;
+	line-height: 1.2em;
+	text-align: center;
+	margin: 0 15% 5% 15%;
+	
+}
+
+.writings button {
+	width: 40%;
+	float: left;
+	text-align: center;
+	margin: 0 30% 5% 30%;
+}
+
+.mags {
+	float: left;
+	display: none;
+	border: 1px lightgray solid;
+	width: 100%;
+	background-color: white;
+}
+
+.mags section {
+	width: 50%;
+	height: 45em;
+	float: left;
+	margin: 0;
+
+}
+
+.mags img {
+	width: auto;
+	border-radius: 7px;
+	height: auto;
+	float: left;
+	margin: 2%;
+	text-align: center;
+	padding-left: 15%;
+}
+
+.mags h3 {
+	width: 70%;
+	float: left;
+	line-height: 1.2em;
+	text-align: center;
+	margin: 0 15% 5% 15%;
+	
+}
+
+.mags button {
+	width: 60%;
+	float: left;
+	text-align: center;
+	margin: 0 20% 5% 20%;
+}
+
+/*-------------------------------
+
+/*Responsive Design*/
+
+@media screen and (min-device-width: 370px) and (max-device-height: 667px){
+	body {
+		margin-top: 2%;
+		margin-left: 0;
+	}
+
+	.show {
+		display: none; 
+	}
+
+	.hide {
+		width: auto;
+	}
+
+	.hamburger {
+		display: block;
+		width: 20%;
+	}
+
+	.miniNav {
+		display: block;
+	}
+
+	.mainHead div {
+		width: 100%;
+	}
+
+	.main div {
+		width: 80%;
+		height: 100%;
+	}
+
+	.rowOne, .rowTwo, .rowThree, .rowFour, .rowFive, .writings, .mags section {
+		width: 100%;
+
+	}
+
+	.writings {
+		width: 100%;
+		height: auto;
+		float: left;
+		margin: 2%;
+		margin-right: 0;
+		padding: 0;
+		padding-right: 10%;
+	}
+
+	.writings:nth-child(4) {
+		margin: 0;
+		padding: 0;
+	}
+
+	.writings:nth-child(4) {
+		margin: 0;
+		padding: 0;
+	}
+
+	.rowFive {
+		max-height: 20%;
+	}
+
+	.footer {
+		height: 30%;
+		width: 100%;
+		bottom: 0;
+	}
+
+	.footerNav {
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.footerNav li {
+		width: 100%;
+		border: 1px lightgray solid;
+		margin: 0;
+		padding: 0;
+	}
+	.hidefoot li a {
+		text-align: right;
+		padding: 0 15% 0 0;
+	}
+
+	.footerNav:nth-child(n+3) {
+		display:none;
+	}
+
+	.hidefoot {
+		float: left;
+		width: 100%;
+		position: relative;
+		font-size: 1em;
+		margin: 0;
+		padding: 0
+	}
+
+	.hide {
+		border: none;
+	}
+
+	#home {
+   		background: url(images/Moreish-Cafe-London.jpg) no-repeat center center;
+    	background-size: 100%;
+    	height: 400px;
+    }
+
+
+	#header {
+		height: 10%;
+		position: absolute;
+
+	}
+
+	#foodAlbum,#portraitAlbum,#natureAlbum,#travelAlbum {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 667px){
+
+	body {
+		margin-top: 2%;
+		margin-left: 0;
+	}
+
+	.show {
+		display: none; 
+	}
+
+	.hide {
+		width: auto;
+	}
+
+	.hamburger {
+		display: block;
+		width: 20%;
+	}
+
+	.miniNav {
+		display: block;
+	}
+
+	.mainHead div {
+		width: 100%;
+	}
+
+	.main div {
+		width: 80%;
+		height: 100%;
+	}
+
+	.rowOne, .rowTwo, .rowThree, .rowFour, .rowFive, .writings, .mags section {
+		width: 100%;
+	}
+
+	.writings {
+		width: 100%;
+		height: auto;
+		float: left;
+		margin: 2%;
+		margin-right: 0;
+		padding: 0;
+		padding-right: 10%;
+
+	}
+
+	.writings:nth-child(4) {
+		margin: 0;
+		padding: 0;
+	}
+
+	.rowFive {
+		max-height: 20%;
+	}
+
+	.footer {
+		height: 40%;
+		width: 100%;
+	}
+
+	.footerNav {
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.footerNav li {
+		width: 100%;
+		border: 1px lightgray solid;
+		margin: 0;
+		padding: 0;
+	}
+	.hidefoot li a {
+		text-align: right;
+		padding: 0 15% 0 0;
+	}
+
+	.footerNav:nth-child(n+3) {
+		display:none;
+	}
+
+	.hidefoot {
+		float: left;
+		width: 100%;
+		position: relative;
+		font-size: 1em;
+		margin: 0;
+		padding: 0;
+	}
+
+	.hide {
+		border: none;
+	}
+
+	#home {
+   		background: url(images/Moreish-Cafe-London.jpg) no-repeat center center;
+    	background-size: 100%;
+    	height: 400px;
+    }
+
+
+	#header {
+		height: 10%;
+		position: absolute;
+		margin: 0 auto;
+		width: 100%;
+
+	}
+
+	#logo {
+		height: auto;
+		font-size: .9em;
+	}
+
+	#foodAlbum,#portraitAlbum,#natureAlbum,#travelAlbum {
+		width: 100%;
+	}
+}
